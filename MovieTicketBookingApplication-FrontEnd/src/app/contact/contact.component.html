@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="contact.component.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+</head>
+
+<body>
+	<section id="contact">
+		<form #form="ngForm">
+			<h1 class="section-header">V6 Cinemas</h1>
+			<div class="contact-wrapper">
+
+				<form id="contact-form" class="form-horizontal" role="form">
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" id="name" [(ngModel)]="employee.name"
+								placeholder="NAME" name="name" value="" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="email" class="form-control" id="email" email #prmEmail="ngModel"
+								[(ngModel)]="employee.email" placeholder="EMAIL" name="email" value="" required
+								#idfield="ngModel">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="number" class="form-control" name="number" [(ngModel)]="employee.phone"
+								placeholder="Phone Number" required="" id="phone">
+						</div>
+					</div>
+
+					<textarea class="form-control" rows="10" [(ngModel)]="employee.message" placeholder="MESSAGE"
+						name="message" required></textarea>
+
+					<button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+						<div class="send-text">
+							<span class="send-text" (click)="createEmployee()">SEND</span>
+						</div>
+					</button>
+
+				</form>
+			</div>
+		</form>
+	</section>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>

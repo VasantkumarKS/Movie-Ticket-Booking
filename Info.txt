@@ -1,0 +1,3 @@
+Front end - Angular
+Backend - Spring boot
+database _ MySql
